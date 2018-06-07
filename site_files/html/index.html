@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/x-css/site.css">
+    <link rel="stylesheet" href="/x-css/font-awesome.css">
+    <title> ##word.brand_title## | ##word.brand_tag## </title>
+    <style x-lang="ar">
+        :root {
+            --direction: rtl;
+            --text-align: right;
+            --float: right;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar ##session.lang## " x-import="navbar.html" ng-controller="navbar"></nav>
+
+    <div class="row ">
+        <div class="col3 center bg-red"> ##word.menu_here## </div>
+        <div class="col9 center bg-blue"> ##word.content_here## </div>
+    </div>
+<br>
+    <table class="table">
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+        </tr>
+        <tr>
+            <td> 1 </td>
+            <td> Amr </td>
+        </tr>
+        <tr>
+            <td> 2 </td>
+            <td>Abd Allah</td>
+        </tr>
+    </table>
+
+
+
+    <script src="/x-js/site.js"></script>
+    <script src="/x-js/angular.js"></script>
+    <script src="/js/navbar.js"></script>
+
+    <div x-permission="!login" x-import="isite-security/login_modal.html"></div>
+    <div x-permission="!login" x-import="isite-security/register_modal.html"></div>
+    <div x-permission="login" x-import="isite-security/logout_modal.html"></div>
+
+</body>
+
+</html>

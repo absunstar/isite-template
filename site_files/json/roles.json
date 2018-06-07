@@ -1,0 +1,4 @@
+[
+    {"name" : "test" , "en" : "Tester" , "ar" : "مستخدم تجريبى" , "permissions" : ["*"]},
+    {"name" : "user" , "en" : "User" , "ar" : "مستخدم" , "permissions" : ["view" , "download"]}
+]

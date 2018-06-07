@@ -1,0 +1,6 @@
+[
+    {"name" : "brand_title" , "en" : "Private Site" , "ar":"موقع شخصى"},
+    {"name" : "brand_tag" , "en" : "just Template" , "ar":"تصميم مبدائى"},
+    {"name" : "menu_here" , "en" : "Side Menu Here" , "ar" : "القائمة الجانبيةهنا"},
+    {"name" : "content_here" , "en" : "Site Content Here" , "ar" : "محتوى الصفحة هنا"}
+]
