@@ -3,6 +3,6 @@
 ## how to install
 
 ```sh
-    git clone https://github.com/absunstar/isite-template && npm run init
+    git clone https://github.com/absunstar/isite-template && cd isite-template & npm run init
 ```
 
