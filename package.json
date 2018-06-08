@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "npm install && cd apps && git clone https://github.com/absunstar/isite-client && git clone https://github.com/absunstar/isite-security  "
   },
   "dependencies": {
-    "isite":"*"
+    "isite": "*"
   },
   "keywords": [],
   "author": "",
