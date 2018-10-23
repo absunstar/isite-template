@@ -1,4 +1,8 @@
 [
-    {"name" : "*" , "en" : "All Permissions" , "ar" : "كل الصلاحيات"} ,
-    {"name" : "view" , "en" : "View Any Content" , "ar" : "مشاهدة اى محتوى على الموقع"}
+   
+    {"name" : "add" , "en" : "Add " , "ar" : "اضافة" },
+    {"name" : "update" , "en" : "Update" , "ar" : "تعديل" },
+    {"name" : "delete" , "en" : "Delete" , "ar" : "حذف" },
+    {"name" : "view" , "en" : "View" , "ar" : "مشاهدة" }
+
 ]

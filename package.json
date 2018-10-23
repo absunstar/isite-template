@@ -1,10 +1,10 @@
 {
   "name": "isite-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "init": "npm install && cd apps && git clone https://github.com/absunstar/isite-client && git clone https://github.com/absunstar/isite-security  "
+    "init": "npm i"
   },
   "dependencies": {
     "isite": "*"

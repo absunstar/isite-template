@@ -3,34 +3,19 @@
 
 <head x-import="head.html"></head>
 
-<body>
+<body class="##session.lang##">
 
 
-    <nav class="navbar ##session.lang## " x-import="navbar.html" ng-controller="navbar"></nav>
+    <nav class="navbar" x-import="navbar/index.html" ng-controller="navbar"></nav>
+    <div x-import="menu/index.html"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 class="center"> Welcome To Isite Template </h1>
 
-    <div class="row ">
-        <div class="col3 center bg-red"> ##word.menu_here## </div>
-        <div class="col9 center bg-blue"> ##word.content_here## </div>
-    </div>
-<br>
-    <table class="table">
-        <tr>
-            <th> ID </th>
-            <th> Name </th>
-        </tr>
-        <tr>
-            <td> 1 </td>
-            <td> Amr </td>
-        </tr>
-        <tr>
-            <td> 2 </td>
-            <td>Abd Allah</td>
-        </tr>
-    </table>
+    <div x-import="scripts.html"></div>
 
-
-
-  <div x-import="scripts.html"></div>
 </body>
 
 </html>
