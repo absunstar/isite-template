@@ -62,4 +62,9 @@ const site = require('isite')({
 site.get({name : '/' , path : site.dir})
 site.get({name : '/' , path : site.dir + '/html/index.html' , parser : 'html css js'})
 
+
+
+site.loadLocalApp('client-side')
+site.loadLocalApp('security')
+
 site.run()
