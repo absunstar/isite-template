@@ -1,0 +1,29 @@
+
+<div id="addCustomerModal" class="modal rtl">
+
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class="center">
+
+                 ##word.customers_add## <i class="fa fa-plus"></i>
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+
+        <div class="modal-body">
+           
+            <div x-import="customers/content.html"></div>
+           
+        </div>
+        <h2 class="center red">{{error}}</h2>
+        <div class="modal-footer center">
+            <i-button type="add" label="##word.add##" ng-hide="!warning" ng-click="add(new_customer)"></i-button>
+            <i-button type="add" label="##word.add##" ng-hide="warning" ng-click="checkPhoneExist(customer.phones)"></i-button>
+            <i-button type="close" label="##word.close##" onclick="site.hideModal('#addCustomerModal')"></i-button>
+                
+        </div>
+    </div>
+
+
+</div>

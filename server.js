@@ -66,5 +66,6 @@ site.get({name : '/' , path : site.dir + '/html/index.html' , parser : 'html css
 
 site.loadLocalApp('client-side')
 site.loadLocalApp('security')
+site.loadLocalApp('ui-print')
 
 site.run()
