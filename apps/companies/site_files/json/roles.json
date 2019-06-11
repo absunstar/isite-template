@@ -1,0 +1,9 @@
+[{
+    "module_name":"public",
+    "name": "companies_admin",
+    "en": "Companies Add Admin",
+    "ar": "ادارة الشركات",
+    "permissions": [
+        "companies_manage"
+    ]
+}]

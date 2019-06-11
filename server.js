@@ -41,8 +41,8 @@ const site = require('isite')({
       db: "security",
       collection: "users",
       admin: {
-        email: "admin@localhost",
-        password: "admin"
+        email: "test",
+        password: "test"
       },
       users: []
     },

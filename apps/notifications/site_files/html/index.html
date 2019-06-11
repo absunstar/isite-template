@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="myApp">
+
+<head x-import="head.html">
+
+</head>
+
+<body class="##session.lang##">
+
+    <nav x-import="navbar/index.html" class="navbar" data-ng-controller="navbar">
+
+    </nav>
+
+    <div x-import="menu/index.html"></div>
+
+
+    <div id="main-layout" class="container" x-permission="login">
+        <div class="row ">
+            <div class="row " ng-controller="notifications">
+                <div x-permission="login" x-import="notifications/display_modal.html"></div>
+                <div x-permission="login" x-import="notifications/search_modal.html"></div>
+                <div x-import="goves/view_modal.html"></div>
+                <div x-import="accounts-opening-balances/view_modal.html"></div>
+                <div x-import="companies/view_modal.html"></div>
+                <div x-import="companies-activities/view_modal.html"></div>
+                <div x-import="vendors/view_modal.html"></div>
+                <div x-import="vendors-group/view_modal.html"></div>
+                <div x-import="customers/view_modal.html"></div>
+                <div x-import="customers-group/view_modal.html"></div>
+                <div x-import="files-names/view_modal.html"></div>
+                <div x-import="nationalities/view_modal.html"></div>
+                <div x-import="currencies/view_modal.html"></div>
+                <div x-import="taxes/view_modal.html"></div>
+                <div x-import="sales-policies/view_modal.html"></div>
+                <div x-import="financial-years/view_modal.html"></div>
+                <div x-import="countries/view_modal.html"></div>
+                <div x-import="cities/view_modal.html"></div>
+                <div x-import="stores-items/view_modal.html"></div>
+                <div x-import="stores-items-groups/view_modal.html"></div>
+                <div x-import="items-types/view_modal.html"></div>
+                <div x-import="items-families/view_modal.html"></div>
+                <div x-import="items-units/view_modal.html"></div>
+                <div x-import="items-related-units/view_modal.html"></div>
+                <div x-import="items-ranks/view_modal.html"></div>
+                <div x-import="stores-sections/view_modal.html"></div>
+                <div x-import="warehouses/view_modal.html"></div>
+                <div x-import="stores-attributes/view_modal.html"></div>
+                <div x-import="services-items/view_modal.html"></div>
+                <div x-import="services-items-groups/view_modal.html"></div>
+                <div x-import="inventory-request-book/view_modal.html"></div>
+                <div x-import="inventory-booking/view_modal.html"></div>
+                <div x-import="inventory-unbooking/view_modal.html"></div>
+                <div x-import="inventory-consignment-in/view_modal.html"></div>
+                <div x-import="inventory-consignment-out/view_modal.html"></div>
+                <div x-import="inventory-stocktaking-request/view_modal.html"></div>
+                <div x-import="inventory-stocktaking-registry/view_modal.html"></div>
+                <div x-import="inventory-stocktaking-merging/view_modal.html"></div>
+                <div x-import="inventory-stocktaking-adjustment/view_modal.html"></div>
+                <div x-import="inventory-opening-balance/view_modal.html"></div>
+                <div x-import="inventory-revaluation/view_modal.html"></div>
+                <div x-import="inventory-store-in/view_modal.html"></div>
+                <div x-import="inventory-store-out/view_modal.html"></div>
+                <div x-import="inventory-transfer-in/view_modal.html"></div>
+                <div x-import="inventory-transfer-out/view_modal.html"></div>
+                <div x-import="inventory-internal-transfer/view_modal.html"></div>
+                <div x-import="inventory-direct-transfer/view_modal.html"></div>
+                <div x-import="inventory-assemble-items/view_modal.html"></div>
+                <div x-import="inventory-disassemble-items/view_modal.html"></div>
+                <div x-import="inventory-damage/view_modal.html"></div>
+                <div x-import="inventory-barcode-print/view_modal.html"></div>
+                <div x-import="guide-accounts/view_modal.html"></div>
+                <div x-import="cost-centers/view_modal.html"></div>
+                <div x-import="guide-income-list/view_modal.html"></div>
+                <div x-import="guide-budget/view_modal.html"></div>
+                <div x-import="journal-entries/view_modal.html"></div>
+                <div x-import="cash-definations/view_modal.html"></div>
+                <div x-import="banks/view_modal.html"></div>
+                <div x-import="debentures-receipt/view_modal.html"></div>
+                <div x-import="debentures-exchange/view_modal.html"></div>
+                <div x-import="creditor-notes/view_modal.html"></div>
+                <div x-import="debtor-notes/view_modal.html"></div>
+                <div x-import="money-transfer/view_modal.html"></div>
+                <div x-import="indebtedness-transfer/view_modal.html"></div>
+                <div x-import="customers-vendors-adjustment/view_modal.html"></div>
+                <div x-import="estimated-accounts/view_modal.html"></div>
+                <div x-import="estimated-cost/view_modal.html"></div>
+                <div x-import="beneficiaries/view_modal.html"></div>
+                <div x-import="reasons-rejection-check/view_modal.html"></div>
+                <div x-import="first-payment-checks/view_modal.html"></div>
+                <div x-import="cashing-checks/view_modal.html"></div>
+                <div x-import="paid-check-return/view_modal.html"></div>
+                <div x-import="pay-check/view_modal.html"></div>
+                <div x-import="customers-checks-return/view_modal.html"></div>
+                <div x-import="first-received-checks/view_modal.html"></div>
+                <div x-import="receipt-checks/view_modal.html"></div>
+                <div x-import="deliver-checks/view_modal.html"></div>
+                <div x-import="check-deposit/view_modal.html"></div>
+                <div x-import="check-return/view_modal.html"></div>
+                <div x-import="check-collection/view_modal.html"></div>
+                <div x-import="inventory-request-transfer/view_modal.html"></div>
+
+                <div class="top-actions">
+                    <i-button type="search" onclick="site.showModal('#SearchModal')" label="##word.search_all##"></i-button>
+
+                </div>
+
+                <table class="table hover loaded" id="t1">
+                    <tr>
+                        <th>##word.notification_name##</th>
+                        <th>##word.notification_message##</th>
+                        <th>##word.notification_value##</th>
+                        <th>##word.notification_time##</th>
+                        <th>##word.notification_user##</th>
+                        <th >##word.actions##</th>
+                    </tr>
+                    <tr class="" ng-repeat="n in list">
+                        <td class="center">
+                            <label>
+                                <img class="logo" ng-src="{{n.icon}}">
+                                <br>
+                                <span x-lang="en">{{n.source.name}}</span>
+                                <span x-lang="ar">{{n.source.ar}}</span>
+                            </label>
+                        </td>
+                        <td class="center">
+                            <b x-lang="en">{{n.message.name}}</b>
+                            <b x-lang="ar">{{n.message.ar}}</b>
+                        </td>
+                        <td class="center">
+                            <span x-lang="en">{{n.value.name}}</span>
+                            <span x-lang="ar">{{n.value.ar}}</span>
+                        </td>
+                        <td class="center">
+                            <span class="blue">{{n.date | date : 'yyyy - MM - dd'}}</span>
+                            <br>
+                            <span class="green">{{n.date | date : ' hh:mm'}}</span>
+                        </td>
+                        <td class="center">
+                            <a href="mailto:{{n.user.email}}">{{n.user.email}}</a>
+                            <br>
+                            <b>{{n.user.name}}</b>
+                            <br> {{n.user.ip}}
+                        </td>
+                        <td class="center">
+                            <a ng-show="n.action == 'add'" class="btn bg-green white"  ng-click="showAdd(n)">
+                                ##word.notification_show_add## <i class="fa fa-plus" aria-hidden="true"></i> </a>
+                            <a ng-show="n.action == 'update'" class="btn bg-yellow black"  ng-click="showUpdate(n)">
+                                ##word.notification_show_update## <i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a ng-show="n.action == 'delete'" class="btn bg-red white"  ng-click="showDelete(n)">
+                                ##word.notification_show_delete## <i class="fa fa-trash" aria-hidden="true"></i> </a>
+                        </td>
+                    </tr>
+
+                </table>
+                <i-button type="export" onclick="export_to_xlsx('t1' , 'notifications.xlsx')" label="##word.export_to_excel##"></i-button>
+                <i-button type="print" label="##word.print##" onclick="site.print('#t1')"> </i-button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div x-import="scripts.html"></div>
+    <script x-permission="login" x-import="notifications/index.js"></script>
+
+</body>
+
+</html>

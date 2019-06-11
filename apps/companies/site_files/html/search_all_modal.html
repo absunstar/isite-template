@@ -1,0 +1,38 @@
+<div id="companieSearchModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>
+                <i class="fa fa-search"></i> ##word.search_all##
+                <i ng-show="busy" class="fa fa-spinner white fa-pulse fa-3x fa-fw"></i>
+            </h2>
+        </div>
+        <div class="modal-body">
+            <div class="col10">
+                <form class="form">
+                    <div class="row">
+                        <i-control class="col3" label="##word.companies_code##" ng-model="search.code"></i-control>
+                        <i-control class="col3" label="##word.companies_name_ar##" ng-model="search.name_ar">
+                        </i-control>
+                        <i-control class="col3" label="##word.companies_name_en##" ng-model="search.name_en">
+                        </i-control>
+                        <i-list class="col6" label="##word.companies_activity##" ng-model="search.activity"
+                            items="companisActivitiesList" display="name" ng-search="_search.$company_activity_search">
+                        </i-list>
+                        <i-list class="col6" v="r" label="##word.companies_currency##" ng-model="search.currency"
+                            items="currencyList" display="name_ar" ng-search="_search.$company_currency_search">
+                        </i-list>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <h2 class="error"> {{error}} </h2>
+        <div class="modal-footer center">
+            <i-button type="search" ng-click="searchAll()" label="##word.search##"></i-button>
+            <i-button type="clear" ng-click="search = {}" label="##word.empty_search##"></i-button>
+            <i-button type="close" onclick="hideModal('companieSearchModal')" label="##word.close##"></i-button>
+        </div>
+    </div>
+</div>
