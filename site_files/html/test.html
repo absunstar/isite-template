@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+</head>
+<body>
+  my test page
+    <div id="data">
+      ##req.headers##
+    </div>
+    <script>
+      if(require){
+        document.querySelector('#data').innerHTML = 'require'
+      }
+      // let d = JSON.stringify(window)
+      // document.querySelector('#data').innerHTML = d
+    </script>
+</body>
+</html>
