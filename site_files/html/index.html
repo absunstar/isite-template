@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
+  <head x-import="head.html"></head>
 
-<head x-import="head.html"></head>
-
-<body class="##session.lang##">
-
-
+  <body class="##session.lang##">
     <nav class="navbar" x-import="navbar/index.html" ng-controller="navbar"></nav>
     <div x-import="menu/index.html"></div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 class="center"> Welcome To Isite Template </h1>
-    <br>
-    <br>
-    <h2 class="center"> User Name : test , Password : test </h2>
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1 class="center">Welcome To Isite Template</h1>
+    <br />
+    <br />
+    <h2 class="center">User Name : test , Password : test</h2>
+    <p class="center" x-feature="host.*">any host</p>
+    <p class="center" x-feature="host.127.0.0.1">127.0.0.1</p>
+    <p class="center" x-feature="*egytag.com*">egytag.com</p>
+    <div class="center">
 
+      <iframe src="https://google.com" frameborder="0" width="1200px" height="720px"></iframe>
+    </div>
     <div x-import="scripts.html"></div>
-
-</body>
-
+    <script>
+      let f = '##req.features##';
+      console.log(f);
+    </script>
+  </body>
 </html>

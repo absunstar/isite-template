@@ -1,5 +1,5 @@
 const site = require('isite')({
-  port: 80,
+  port: 8080,
   dir: process.cwd() + '/site_files',
   apps: true,
   apps_dir: process.cwd() + '/apps',
@@ -13,9 +13,6 @@ const site = require('isite')({
   session: {
     timeout: 60 * 24 * 30,
     enabled: true,
-    storage: 'mongodb',
-    db: 'sessions',
-    collection: 'user_sessions',
   },
   mongodb: {
     enabled: true,
@@ -38,13 +35,7 @@ const site = require('isite')({
   },
   security: {
     enabled: true,
-    db: 'security',
-    collection: 'users',
-    admin: {
-      email: 'test',
-      password: 'test',
-    },
-    users: [],
+    keys: ['05a671c66aefea124cc08b76ea6d30bb'],
   },
   cache: {
     enabled: true,
@@ -57,25 +48,21 @@ const site = require('isite')({
     json: 60 * 24 * 30,
     xml: 60 * 24 * 30,
   },
-  require: {
-    features: [],
-    permissions: [],
-  },
 });
 
-site.get({
+site.onGET({
   name: '/',
   path: site.dir,
   require: {
-    features: ['browser.edge'],
+    features: ['browser.social'],
   },
 });
-site.get({
+site.onGET({
   name: '/',
   path: site.dir + '/html/index.html',
-  parser: 'html css js'
+  parser: 'html css js',
 });
-site.get({
+site.onGET({
   name: '/admin',
   path: site.dir + '/html/index.html',
   parser: 'html css js',
@@ -88,3 +75,5 @@ site.loadLocalApp('security');
 site.loadLocalApp('ui-print');
 
 site.run();
+
+

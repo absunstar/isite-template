@@ -33,7 +33,7 @@ module.exports = function init(site) {
     })
   })
 
-  site.get({
+  site.onGET({
     name: "customers",
     path: __dirname + "/site_files/html/index.html",
     parser: "html",
@@ -41,7 +41,7 @@ module.exports = function init(site) {
   })
 
 
-  site.post("/api/customers/add", (req, res) => {
+  site.onPOST("/api/customers/add", (req, res) => {
     let response = {}
     response.done = false
     if (req.session.user === undefined) {
@@ -61,7 +61,7 @@ module.exports = function init(site) {
     })
   })
 
-  site.post("/api/customers/update", (req, res) => {
+  site.onPOST("/api/customers/update", (req, res) => {
     let response = {}
     response.done = false
     if (req.session.user === undefined) {
@@ -91,7 +91,7 @@ module.exports = function init(site) {
     }
   })
 
-  site.post("/api/customers/delete", (req, res) => {
+  site.onPOST("/api/customers/delete", (req, res) => {
     let response = {}
     response.done = false
     if (req.session.user === undefined) {
@@ -114,7 +114,7 @@ module.exports = function init(site) {
     }
   })
 
-  site.post("/api/customers/viewphone", (req, res) => {
+  site.onPOST("/api/customers/viewphone", (req, res) => {
     let response = {}
     response.docs = []
     response.done = false
@@ -140,7 +140,7 @@ module.exports = function init(site) {
     
  
   })
-  site.post("/api/customers/view", (req, res) => {
+  site.onPOST("/api/customers/view", (req, res) => {
     let response = {}
     response.done = false
     $customers.findOne({
@@ -156,7 +156,7 @@ module.exports = function init(site) {
     })
   })
 
-  site.post("/api/customers/all", (req, res) => {
+  site.onPOST("/api/customers/all", (req, res) => {
     let response = {}
     response.done = false
     let where = req.body.where || {}
