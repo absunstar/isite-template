@@ -1,5 +1,5 @@
-const site = require('isite')({
-  port: 8080,
+const site = require('../isite')({
+  port: 9090,
   dir: process.cwd() + '/site_files',
   apps: true,
   apps_dir: process.cwd() + '/apps',
@@ -53,14 +53,15 @@ const site = require('isite')({
 site.onGET({
   name: '/',
   path: site.dir,
-  require: {
-    features: ['browser.social'],
-  },
+  public: true,
 });
 site.onGET({
   name: '/',
   path: site.dir + '/html/index.html',
   parser: 'html css js',
+});
+site.onGET('/new', (req, res) => {
+  site.callRoute('/goves', req, res);
 });
 site.onGET({
   name: '/admin',
@@ -73,7 +74,25 @@ site.onGET({
 site.loadLocalApp('client-side');
 site.loadLocalApp('security');
 site.loadLocalApp('ui-print');
+// site.onWS('/users', (client) => {
+//   client.onMessage = function (message) {
+//     console.log(message);
+//     if (message.type === 'connected') {
+//       client.send({ type: 'ready' });
+//     }
+//   };
+//   console.log('New Client ...' + client.ip);
+// });
 
+// setInterval(() => {
+//   site.ws.clientList.forEach((_client) => {
+//     _client.send({ type: 'date', content: Date.now(), count: site.ws.clientList.length });
+//   });
+// }, 1000 * 5);
+// site.sendEmail({
+//   from: 'user1@egytag.com',
+//   to: 'absunstar@gmail.com',
+//   subject: 'test mail 1',
+//   message: 'test message 1',
+// });
 site.run();
-
-

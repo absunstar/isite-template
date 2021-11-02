@@ -17,13 +17,32 @@
     <p class="center" x-feature="host.127.0.0.1">127.0.0.1</p>
     <p class="center" x-feature="*egytag.com*">egytag.com</p>
     <div class="center">
-
       <iframe src="https://google.com" frameborder="0" width="1200px" height="720px"></iframe>
     </div>
     <div x-import="scripts.html"></div>
     <script>
-      let f = '##req.features##';
-      console.log(f);
+      site.ws('ws://127.0.0.1:9090/users', (server) => {
+        window.server = server;
+        server.onOpen = () => {
+          server.send({ type: 'accessToken', content: '##session.accessToken##' });
+        };
+        server.onMessage = (msg) => {
+          console.log(msg);
+        };
+        // ws.onerror = function (error) {};
+        // ws.onclose = function () {};
+
+        // ws.onopen = function () {
+        //   ws.send(JSON.stringify({ type: 'attach' }));
+        // };
+
+        // ws.onmessage = function (msg) {
+        //   msg = JSON.parse(msg.data);
+        //   if (msg.type === 'ready') {
+        //     ws.send(JSON.stringify({ type: 'ready' }));
+        //   }
+        // };
+      });
     </script>
   </body>
 </html>

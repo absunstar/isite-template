@@ -7,7 +7,9 @@
     "init": "npm i"
   },
   "dependencies": {
-    "isite": "*"
+    "@electron/remote": "^1.2.1",
+    "electron": "^13.2.1",
+    "isite": "^1.14.71"
   },
   "keywords": [],
   "author": "",
