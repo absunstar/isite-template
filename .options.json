@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Template Site",
+        "mongodb": {
+            "limit": 10,
+            "db" : "templateDB"
+        }
+    }
+]

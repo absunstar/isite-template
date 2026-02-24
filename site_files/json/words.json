@@ -1,5 +1,22 @@
 [
     {
+        "name": "siteName",
+        "en": "siteName 1",
+        "ar": "siteName 2",
+        "hostList": [
+            {
+                "name": "pos.*",
+                "en": "Site Name POS",
+                "ar": "siteName 4"
+            },
+            {
+                "name": "*gym*",
+                "en": "Site Name GYM",
+                "ar": "siteName 4"
+            }
+        ]
+    },
+    {
         "name": "brand_title",
         "en": "ERP",
         "ar": "ادرة موارد الشركة"
@@ -223,11 +240,13 @@
         "name": "search",
         "en": "Search",
         "ar": "بحـث"
-    }, {
+    },
+    {
         "name": "search_all",
         "en": "Search All",
         "ar": "بحث شامل"
-    },  {
+    },
+    {
         "name": "clear",
         "en": "Clear",
         "ar": "تفريغ الحقول"
@@ -261,15 +280,18 @@
         "name": "from_date",
         "en": "From Date",
         "ar": "من تاريخ"
-    }, {
+    },
+    {
         "name": "to_date",
         "en": "To Date",
         "ar": "الى تاريخ"
-    }, {
+    },
+    {
         "name": "le",
         "en": "LE",
         "ar": "جنيه"
-    }, {
+    },
+    {
         "name": "select_all",
         "en": "Select All",
         "ar": "أختيار الكل"
